@@ -26,11 +26,11 @@ import {
 import { Typography } from '@rmwc/typography';
 
 // CSS
-import './styles/App.css';
+import './styles/App.scss';
 import './styles/fonts.css';
 
 // According to the RMWC docs, it is recommended to only import styles for components you use.
-import 'rmwc/dist/styles';
+// import 'rmwc/dist/styles';
 
 // Some dummy data for demonstration
 import {
