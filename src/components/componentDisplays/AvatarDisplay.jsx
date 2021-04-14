@@ -7,19 +7,30 @@ const AvatarDisplay = ({ data }) => {
   return (
     <>
       <div className='row'>
-        {data.map((item) => (
-          <Avatar name={item.name} src={item.img} size='large' />
+        {data.map((person) => (
+          <Avatar
+            key={person.name}
+            name={person.name}
+            src={person.img}
+            size='large'
+          />
         ))}
       </div>
       <div className='row'>
-        {data.map((item) => (
-          <Avatar name={item.name} size='large' />
+        {data.map((person) => (
+          <Avatar key={person.name} name={person.name} size='large' />
         ))}
       </div>
       <div className='row'>
         <AvatarGroup dense>
-          {data.map((item) => (
-            <Avatar src={item.img} name={item.name} size='large' interactive />
+          {data.map((person) => (
+            <Avatar
+              key={person.name}
+              src={person.img}
+              name={person.name}
+              size='large'
+              interactive
+            />
           ))}
           <AvatarCount size='large' overflow value={3} interactive />
         </AvatarGroup>
