@@ -85,3 +85,36 @@ export const drawerData = {
     { label: 'Downloads', icon: 'file_download' },
   ],
 };
+
+export const imageListData = [
+  '/placeholder-portrait.png',
+  '/placeholder-landscape-short.png',
+  '/placeholder-landscape-med.png',
+  '/placeholder-landscape-short.png',
+  '/placeholder-portrait.png',
+  '/placeholder-landscape-short.png',
+];
+
+export const listData = [
+  {
+    title: 'Burger',
+    subtitle: '$4.99',
+    icon: 'lunch_dining',
+  },
+  {
+    title: 'Pizze',
+    subtitle: '$1.99 / slice',
+    icon: 'local_pizza',
+  },
+  {
+    title: 'Ice Cream',
+    subtitle: '$0.99',
+    icon: 'icecream',
+  },
+];
+
+export const radioButtonData = [
+  { label: 'Yayaya', value: 'yayaya' },
+  { label: 'Hahaha', value: 'hahaha' },
+  { label: 'Bababa', value: 'bababa' },
+];
