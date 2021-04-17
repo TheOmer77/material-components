@@ -4,40 +4,40 @@ import React, { useEffect, useState } from 'react';
 import { ThemeProvider } from '@rmwc/theme';
 
 const themeColors = (darkTheme) => ({
-  primary: darkTheme ? '#0027be' : '#004ef2',
-  secondary: darkTheme ? '#b74e00' : '#f07c00',
-  error: '#f20000',
-  background: darkTheme ? '#111' : '#fff',
-  surface: darkTheme ? '#222' : '#fff',
-  onPrimary: 'rgba(255, 255, 255, 1)',
-  onSecondary: `rgba(${darkTheme ? '255, 255, 255' : '0, 0, 0'}, 0.87)`,
+  primary: darkTheme ? '#9eacfa' : '#0055f2',
+  secondary: darkTheme ? '#f3c72a' : '#f29d00',
+  error: darkTheme ? '#a90000' : '#e40c0c',
+  background: darkTheme ? '#121212' : '#fff',
+  surface: darkTheme ? '#1e1e1e' : '#fff',
+  onPrimary: `rgba(${darkTheme ? '0, 0, 0' : '255, 255, 255'}, 1)`,
+  onSecondary: `rgba(0, 0, 0, 0.87)`,
   onSurface: `rgba(${darkTheme ? '255, 255, 255' : '0, 0, 0'}, 0.87)`,
   onError: '#fff',
-  textPrimaryOnBackground: `rgba(${
-    darkTheme ? '255, 255, 255' : '0, 0, 0'
-  }, 0.87)`,
-  textSecondaryOnBackground: `rgba(${
-    darkTheme ? '255, 255, 255' : '0, 0, 0'
-  }, 0.54)`,
-  textHintOnBackground: `rgba(${
-    darkTheme ? '255, 255, 255' : '0, 0, 0'
-  }, 0.38)`,
-  textDisabledOnBackground: `rgba(${
-    darkTheme ? '255, 255, 255' : '0, 0, 0'
-  }, 0.38)`,
-  textIconOnBackground: `rgba(${
-    darkTheme ? '255, 255, 255' : '0, 0, 0'
-  }, 0.38)`,
-  textPrimaryOnLight: 'rgba(0, 0, 0, 0.87)',
-  textSecondaryOnLight: 'rgba(0, 0, 0, 0.54)',
-  textHintOnLight: 'rgba(0, 0, 0, 0.38)',
-  textDisabledOnLight: 'rgba(0, 0, 0, 0.38)',
-  textIconOnLight: 'rgba(0, 0, 0, 0.38)',
-  textPrimaryOnDark: 'white',
-  textSecondaryOnDark: 'rgba(255, 255, 255, 0.7)',
-  textHintOnDark: 'rgba(255, 255, 255, 0.5)',
-  textDisabledOnDark: 'rgba(255, 255, 255, 0.5)',
-  textIconOnDark: 'rgba(255, 255, 255, 0.5)',
+  // textPrimaryOnBackground: `rgba(${
+  //   darkTheme ? '255, 255, 255' : '0, 0, 0'
+  // }, 0.87)`,
+  // textSecondaryOnBackground: `rgba(${
+  //   darkTheme ? '255, 255, 255' : '0, 0, 0'
+  // }, 0.54)`,
+  // textHintOnBackground: `rgba(${
+  //   darkTheme ? '255, 255, 255' : '0, 0, 0'
+  // }, 0.38)`,
+  // textDisabledOnBackground: `rgba(${
+  //   darkTheme ? '255, 255, 255' : '0, 0, 0'
+  // }, 0.38)`,
+  // textIconOnBackground: `rgba(${
+  //   darkTheme ? '255, 255, 255' : '0, 0, 0'
+  // }, 0.38)`,
+  // textPrimaryOnLight: 'rgba(0, 0, 0, 0.87)',
+  // textSecondaryOnLight: 'rgba(0, 0, 0, 0.54)',
+  // textHintOnLight: 'rgba(0, 0, 0, 0.38)',
+  // textDisabledOnLight: 'rgba(0, 0, 0, 0.38)',
+  // textIconOnLight: 'rgba(0, 0, 0, 0.38)',
+  // textPrimaryOnDark: 'white',
+  // textSecondaryOnDark: 'rgba(255, 255, 255, 0.7)',
+  // textHintOnDark: 'rgba(255, 255, 255, 0.5)',
+  // textDisabledOnDark: 'rgba(255, 255, 255, 0.5)',
+  // textIconOnDark: 'rgba(255, 255, 255, 0.5)',
 });
 
 const Theme = ({ children }) => {

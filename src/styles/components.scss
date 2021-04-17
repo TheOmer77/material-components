@@ -1,7 +1,7 @@
+// Import every component that I want to modify the shape or overall CSS of (and doesn't give me an error lol)
 @import '@material/button/mdc-button';
 @import '@material/card/mdc-card';
 @import '@material/checkbox/mdc-checkbox';
-@import '@material/chips/mdc-chips';
 @import '@material/dialog/mdc-dialog';
 @import '@material/drawer/mdc-drawer';
 @import '@material/elevation/mdc-elevation';
@@ -10,7 +10,6 @@
 @import '@material/icon-button/mdc-icon-button';
 @import '@material/image-list/mdc-image-list';
 @import '@material/linear-progress/mdc-linear-progress';
-@import '@material/list/mdc-list';
 @import '@material/menu/mdc-menu';
 @import '@material/menu-surface/mdc-menu-surface';
 @import '@material/radio/mdc-radio';
@@ -26,7 +25,6 @@
 @import '@material/tab-scroller/mdc-tab-scroller';
 @import '@material/tab-indicator/mdc-tab-indicator';
 @import '@material/tab/mdc-tab';
-@import '@material/textfield/mdc-text-field';
 @import '@material/textfield/helper-text';
 @import '@material/theme/color-palette';
 @import '@material/theme/functions';
@@ -34,3 +32,129 @@
 @import '@material/top-app-bar/mdc-top-app-bar';
 @import '@material/typography/mdc-typography';
 @import '@material/data-table/mdc-data-table';
+
+// Some CSS fixes, most of which are for dark mode
+.mdc-checkbox
+  .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate='true'])
+  ~ .mdc-checkbox__background {
+  border-color: var(--mdc-theme-text-secondary-on-background);
+}
+
+.mdc-checkbox
+  .mdc-checkbox__native-control:enabled
+  ~ .mdc-checkbox__background
+  .mdc-checkbox__checkmark,
+.mdc-checkbox
+  .mdc-checkbox__native-control:enabled
+  ~ .mdc-checkbox__background
+  .mdc-checkbox__mixedmark {
+  color: var(--mdc-theme-on-secondary);
+  border-color: var(--mdc-theme-on-secondary);
+}
+
+.mdc-chip,
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: var(--mdc-theme-text-primary-on-background);
+}
+
+.mdc-drawer {
+  background-color: var(--mdc-theme-surface);
+}
+
+.mdc-data-table__header-cell,
+.mdc-data-table__cell,
+.mdc-dialog .mdc-dialog__title,
+.mdc-drawer .mdc-drawer__title {
+  color: var(--mdc-theme-on-surface);
+}
+
+body .mdc-drawer .mdc-list .mdc-list-item {
+  border-radius: $mdc-shape-small-component-radius;
+}
+
+.mdc-chip__icon--leading,
+.mdc-dialog .mdc-dialog__content,
+.mdc-drawer .mdc-drawer__subtitle,
+.mdc-drawer .mdc-list-item__graphic,
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label,
+.mdc-text-field:not(.mdc-text-field--disabled)
+  + .mdc-text-field-helper-line
+  .mdc-text-field-helper-text {
+  color: var(--mdc-theme-text-secondary-on-background);
+}
+
+.mdc-text-field--disabled .mdc-floating-label,
+.mdc-text-field--disabled .mdc-text-field__input,
+.mdc-text-field--disabled
+  + .mdc-text-field-helper-line
+  .mdc-text-field-helper-text {
+  color: var(--mdc-theme-text-disabled-on-background);
+}
+
+.mdc-text-field {
+  border-radius: $mdc-shape-small-component-radius
+    $mdc-shape-small-component-radius 0 0;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled):hover .mdc-line-ripple::before {
+  border-bottom-color: var(--mdc-theme-text-primary-on-background);
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover
+  .mdc-notched-outline
+  .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover
+  .mdc-notched-outline
+  .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled):not(.mdc-text-field--focused):hover
+  .mdc-notched-outline
+  .mdc-notched-outline__trailing {
+  border-color: var(--mdc-theme-text-primary-on-background);
+}
+
+.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading,
+.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__notch,
+.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__trailing {
+  border-color: var(--mdc-theme-text-hint-on-background);
+}
+
+.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__leading,
+[dir='rtl']
+  .mdc-text-field--outlined
+  .mdc-notched-outline
+  .mdc-notched-outline__trailing,
+.mdc-text-field--outlined
+  .mdc-notched-outline
+  .mdc-notched-outline__trailing[dir='rtl'] {
+  border-radius: $mdc-shape-small-component-radius 0 0
+    $mdc-shape-small-component-radius;
+  width: $mdc-shape-small-component-radius;
+}
+.mdc-text-field--outlined .mdc-notched-outline .mdc-notched-outline__trailing,
+[dir='rtl']
+  .mdc-text-field--outlined
+  .mdc-notched-outline
+  .mdc-notched-outline__leading,
+.mdc-text-field--outlined
+  .mdc-notched-outline
+  .mdc-notched-outline__leading[dir='rtl'] {
+  border-radius: 0 $mdc-shape-small-component-radius
+    $mdc-shape-small-component-radius 0;
+}
+
+// Dark theme
+@media (prefers-color-scheme: dark) {
+  .mdc-top-app-bar {
+    background-color: var(--mdc-theme-surface);
+  }
+  body .mdc-top-app-bar,
+  .mdc-top-app-bar .mdc-top-app-bar__action-item,
+  .mdc-top-app-bar .mdc-top-app-bar__navigation-icon {
+    color: var(--mdc-theme-on-surface);
+  }
+
+  .mdc-chip,
+  .mdc-text-field:not(.mdc-text-field--outlined) {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+}

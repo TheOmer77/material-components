@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 
-import AppTheme from '../AppTheme';
-
 // Components
 import {
   Card,
@@ -73,10 +71,7 @@ const CardDisplay = ({ title, subtitle, text, image, buttons }) => {
 
 const NotifySnackbar = ({ message, open, setOpen }) =>
   createPortal(
-    // Since this is in a portal we need to re-apply the app theme.
-    <AppTheme>
-      <Snackbar open={open} onClose={() => setOpen(false)} message={message} />
-    </AppTheme>,
+    <Snackbar open={open} onClose={() => setOpen(false)} message={message} />,
     document.getElementById('snackbar')
   );
 

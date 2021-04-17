@@ -7,8 +7,8 @@ import { IconButton } from '@rmwc/icon-button';
 const ComponentDisplay = ({ title = 'Title', docsLink, children }) => {
   return (
     <div className='component-display'>
-      <h3 className='title'>
-        <Typography use='headline6'>{title}</Typography>
+      <Typography use='overline' className='title'>
+        <span>{title}</span>
         {docsLink && (
           <IconButton
             icon='open_in_new'
@@ -18,7 +18,7 @@ const ComponentDisplay = ({ title = 'Title', docsLink, children }) => {
             href={docsLink}
           />
         )}
-      </h3>
+      </Typography>
       {children}
     </div>
   );

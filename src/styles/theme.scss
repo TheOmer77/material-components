@@ -1,20 +1,43 @@
-/*  Typography */
-$mdc-typography-font-family: unquote('Roboto, sans-serif');
-
 /* Shape */
 $mdc-shape-small-component-radius: 16px;
-$mdc-shape-medium-component-radius: 24px;
-$mdc-shape-large-component-radius: 16px;
+$mdc-shape-medium-component-radius: 16px;
+$mdc-shape-large-component-radius: 0px;
 
-/* Color */
-$mdc-theme-primary: #004ef2;
-$mdc-theme-secondary: #f07c00;
+// :root {
+//   /* Color */
+//   --mdc-theme-primary: #0055f2;
+//   --mdc-theme-secondary: #f29d00;
 
-$mdc-theme-surface: #ffffff;
-$mdc-theme-background: #ffffff;
-$mdc-theme-error: #f20000;
+//   --mdc-theme-background: #fff;
+//   --mdc-theme-surface: #fff;
+//   --mdc-theme-error: #e40c0c;
 
-$mdc-theme-on-primary: #ffffff;
-$mdc-theme-on-secondary: #ffffff;
-$mdc-theme-on-error: #ffffff;
-$mdc-theme-on-surface: #000000;
+//   --mdc-theme-on-primary: #fff;
+//   --mdc-theme-on-secondary: #000;
+//   --mdc-theme-on-error: #fff;
+//   --mdc-theme-on-surface: #000;
+
+//   --mdc-theme-text-primary-on-background: #000;
+// }
+
+// // Dark theme
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --mdc-theme-primary: #9eacfa;
+//     --mdc-theme-secondary: #f3c72a;
+
+//     --mdc-theme-background: #121212;
+//     --mdc-theme-surface: #1e1e1e;
+//     --mdc-theme-error: #a90000;
+
+//     --mdc-theme-on-primary: #000;
+//     --mdc-theme-on-surface: #fff;
+
+//     --mdc-theme-text-primary-on-background: #fff;
+//   }
+// }
+
+body {
+  color: var(--mdc-theme-text-primary-on-background);
+  background-color: var(--mdc-theme-background);
+}

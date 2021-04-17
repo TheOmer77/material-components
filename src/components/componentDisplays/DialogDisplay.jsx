@@ -74,7 +74,7 @@ const CustomDialog = ({ open, setOpen, image }) =>
         <div
           style={{
             backgroundColor: 'var(--mdc-theme-primary)',
-            color: 'var(--mdc-theme-text-primary-on-dark)',
+            color: 'var(--mdc-theme-on-primary)',
             padding: '1.5rem',
           }}
         >
