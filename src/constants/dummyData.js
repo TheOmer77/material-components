@@ -102,7 +102,7 @@ export const listData = [
     icon: 'lunch_dining',
   },
   {
-    title: 'Pizze',
+    title: 'Pizza',
     subtitle: '$1.99 / slice',
     icon: 'local_pizza',
   },

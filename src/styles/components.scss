@@ -2,6 +2,7 @@
 @import '@material/button/mdc-button';
 @import '@material/card/mdc-card';
 @import '@material/checkbox/mdc-checkbox';
+@import '@material/data-table/mdc-data-table';
 @import '@material/dialog/mdc-dialog';
 @import '@material/drawer/mdc-drawer';
 @import '@material/elevation/mdc-elevation';
@@ -10,20 +11,20 @@
 @import '@material/icon-button/mdc-icon-button';
 @import '@material/image-list/mdc-image-list';
 @import '@material/linear-progress/mdc-linear-progress';
-@import '@material/menu/mdc-menu';
 @import '@material/menu-surface/mdc-menu-surface';
+@import '@material/menu/mdc-menu';
 @import '@material/radio/mdc-radio';
 @import '@material/ripple/mixins';
 @import '@material/rtl/mixins';
 @import '@material/select/mdc-select';
-@import '@material/shape/mixins';
 @import '@material/shape/functions';
+@import '@material/shape/mixins';
 @import '@material/slider/styles';
 @import '@material/snackbar/mdc-snackbar';
 @import '@material/switch/mdc-switch';
 @import '@material/tab-bar/mdc-tab-bar';
-@import '@material/tab-scroller/mdc-tab-scroller';
 @import '@material/tab-indicator/mdc-tab-indicator';
+@import '@material/tab-scroller/mdc-tab-scroller';
 @import '@material/tab/mdc-tab';
 @import '@material/textfield/helper-text';
 @import '@material/theme/color-palette';
@@ -31,25 +32,12 @@
 @import '@material/theme/mixins';
 @import '@material/top-app-bar/mdc-top-app-bar';
 @import '@material/typography/mdc-typography';
-@import '@material/data-table/mdc-data-table';
 
 // Some CSS fixes, most of which are for dark mode
 .mdc-checkbox
   .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate='true'])
   ~ .mdc-checkbox__background {
   border-color: var(--mdc-theme-text-secondary-on-background);
-}
-
-.mdc-checkbox
-  .mdc-checkbox__native-control:enabled
-  ~ .mdc-checkbox__background
-  .mdc-checkbox__checkmark,
-.mdc-checkbox
-  .mdc-checkbox__native-control:enabled
-  ~ .mdc-checkbox__background
-  .mdc-checkbox__mixedmark {
-  color: var(--mdc-theme-on-secondary);
-  border-color: var(--mdc-theme-on-secondary);
 }
 
 .mdc-chip,

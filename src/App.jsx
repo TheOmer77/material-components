@@ -20,6 +20,7 @@ import {
   ImageLists,
   Lists,
   RadioButtons,
+  Selects,
   Snackbars,
   TextFields,
   TopAppBars,
@@ -42,9 +43,9 @@ import {
   radioButtonData,
 } from './constants/dummyData';
 
-// CSS
-import 'rmwc/dist/styles';
+// Import the RMWC CSS, as well as my own tweaks SCSS
 import './styles/App.scss';
+import 'rmwc/dist/styles';
 
 const App = () => {
   const [rtl, setRtl] = useState(false);
@@ -115,8 +116,11 @@ const App = () => {
           >
             <RadioButtons data={radioButtonData} />
           </ComponentDisplay>
-          <ComponentDisplay title='Select Menus'>
-            TODO: Select Menus
+          <ComponentDisplay
+            title='Select Menus'
+            docsLink='https://rmwc.io/select-menus'
+          >
+            <Selects />
           </ComponentDisplay>
           <ComponentDisplay title='Sliders'>TODO: Sliders</ComponentDisplay>
           <ComponentDisplay title='Switches'>TODO: Switches</ComponentDisplay>

@@ -14,8 +14,8 @@ const ImageListDisplay = ({ data }) => {
           margin: 0,
         }}
       >
-        {data.map((src) => (
-          <ImageListItem key={src} style={{ marginBottom: '16px' }}>
+        {data.map((src, index) => (
+          <ImageListItem key={index} style={{ marginBottom: '16px' }}>
             <ImageListImage src={src} />
           </ImageListItem>
         ))}
